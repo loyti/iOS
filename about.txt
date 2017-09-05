@@ -1,0 +1,21 @@
+Swift Things To Know
+
+Strongly Typed
+everything must have a 'type' declaration
+
+Optionals
+var myOption: String?
+
+force unwrap
+myOpt!
+
+safe unwrap
+if let someVar = myOption {
+// do something here
+} else {
+// was nil
+}
+
+iOS
+Request Response Cycle
+mobile device makes calls and received response
