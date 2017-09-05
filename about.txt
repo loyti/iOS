@@ -3,11 +3,22 @@ Swift Things To Know
 Strongly Typed
 everything must have a 'type' declaration
 
+iOS
+Request Response Cycle
+mobile device makes calls and received response
+
+
+
+
 Optionals
 var myOption: String?
 
 force unwrap
 myOpt!
+var present: String? = "Apple Watch"        // If we can let "unwrappedPresent" equal "present"
+                                            // (meaning there is something inside of present)
+                                            // then go on to do something with "unwrappedPresent"
+print("OMG THANK YOU FOR THE \(present!)")  // Force unwrap using the "!"
 
 safe unwrap
 if let someVar = myOption {
@@ -16,6 +27,137 @@ if let someVar = myOption {
 // was nil
 }
 
-iOS
-Request Response Cycle
-mobile device makes calls and received response
+Implicitly Unwrapped Optionals
+Implicitly unwrapped optionals are a little weird. They are still of the Optional Type: it can either contain a value or it is nil. The difference is that we don't need to unwrap them. With great power comes great responsibility. If we try to access the value of an implicitly unwrapped optional, it will result in a runtime error if it does not have a value.
+
+var present: String! = "Apple Watch"         // We don't have to unwrap to use the value,
+print("\(present)")
+present = nil                                // but we can still set it to nil.
+print("\(present)")
+
+
+
+About Arrays
+ways to loop through arrays
+
+var starters = ["Fisher", "Kobe", "Gasol", "Bynum", "World Peace"]
+for starter in starters {
+    print(starter)
+}
+
+for i in 0..<starters.count {
+    print(starters[i])
+}
+
+append to the end
+var nums = [1, 2, 3, 4]
+nums.append(5)
+print(nums)
+
+remove from array
+var arrayOfInts = [1, 2, 3, 4, 5]
+var popped = arrayOfInts.remove(at: 0)
+print(popped)
+print(arrayOfInts)
+
+insert into array at specific point
+var arrayOfInts = [1, 2, 3, 4, 5]
+arrayOfInts.insert(6, at: 5)
+
+
+
+
+
+About Dictionaries
+
+Accessing Dictionary
+// here we are declaring myDict variable to be of Dictionary Type that will use instances of String as
+// its keys and instances of Int as its values
+var dictionary = [
+    "Kobe": 24,
+    "Lebron": 23,
+    "Rondo": 9
+]
+// Note how we are leveraging Swift's type inference here
+
+dictionary["Kobe"]
+var jerseyNumber = dictionary["Kobe"]
+print(jerseyNumber) // Optional is not unwrapped
+
+var jerseyNumber = dictionary["Kobe"]!
+print(jerseyNumber)
+
+if let jerseyNumber = dictionary["Kobe"] {
+    print(jerseyNumber)
+}
+
+
+Modifying Dictionary
+
+var dictionary = [
+    "Kobe": 8,
+    "Lebron": 23,
+    "Rondo": 9
+]
+print(dictionary)
+dictionary["Fisher"] = 2
+print(dictionary)
+dictionary["Kobe"] = 24
+print(dictionary)
+
+Removing Dictionary
+
+dictionary["Lebron"] = nil
+
+var lebronsNumber = dictionary.removeValue(forKey: "Lebron")
+print(lebronsNumber)
+
+if let lebronsNumber = dictionary.removeValue(forKey: "Lebron") {
+    print(lebronsNumber)
+}
+
+Looping through Dictionaries
+
+for (key, value) in dictionary {
+    print("The key is \(key) and the value is \(value)")
+}
+
+for x in dictionary {
+    print(x)
+}
+
+// We are declaring a function named lookForSomethingIn and declaring two parameters.
+// The first parameter will be an instance of Dictionary, with keys being instances of String
+// and values being instances of Int.
+// The first parameter has no external name but it has an internal name of dictionary.
+// The second parameter will be an instance of a String.
+// It has an external name of forKey and an internal name of key.
+// This function promises to return an Optional Type that can either be nil or hold an instance of Int.
+
+func lookForSomethingIn(dictionary: [String: Int], forKey key: String) -> Int? {
+    if let value = dictionary[key] {
+        return value
+    } else {
+        return nil
+    }
+}
+var jerseyNumbers = ["Kobe": 24, "Curry": 30]
+var jerseyNumber = lookForSomethingIn(dictionary: jerseyNumbers, forKey: "Kobe")
+if let num = jerseyNumber {
+    print(num)
+}
+
+
+
+Functions Documentation (https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158)
+
+In-Out Parameters
+If we want to modify an argument and we want that change to appear on the outside of the function call, we need in-out parameters. There are two prerequisites to in-out parameters. First, we have to specify that our parameter is an in-out by following the parameter name with in-out. Next, when we invoke the function we have to pass in an argument with the '&' sign prefixed to it. Think of the '&' sign as passing the memory address of the particular constant or variable so that the function can go directly there and modify it so that the changes will persist outside of the function.
+
+var myInt = 1
+func changeMyInt(someInt: inout Int) {         // must specify "inout"
+    someInt = someInt + 1
+    print(someInt)
+}
+changeMyInt(someInt: &myInt)                            // must pass in the variable with "&" symbol
+print(myInt)
