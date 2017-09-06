@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     ]
     var randomNum:Int = Int(arc4random_uniform(5))
     
+    @IBOutlet weak var rNumber: UILabel!
     @IBOutlet weak var randomNameLabel: UILabel!
     
     @IBAction func coldCallButton(_ sender: UIButton) {
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         if randomNameLabel.isHidden == true {
             randomNameLabel.isHidden = false
             randomNameLabel.text = randomNames[randomNum]
+            rNumber.text = "\(randomNum)"
             updateUI()
         } else {
             randomNameLabel.isHidden = true
@@ -42,6 +44,7 @@ class ViewController: UIViewController {
     func updateUI() {
         randomNameLabel.text = randomNames[randomNum]
         randomNameLabel.isHidden = false
+        rNumber.text = "\(randomNum)"
         
         // set questionLabel's text to equal quizBank[currentQuestion].0
         // set answerLabel's text to equal quizBank[currentQuestion].1

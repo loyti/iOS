@@ -22,12 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Name Selector" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h4-73-sNB">
-                                <rect key="frame" x="16" y="28" width="343" height="27.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLx-cw-sgP">
                                 <rect key="frame" x="16" y="314" width="343" height="39"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -46,23 +40,49 @@
                                     <action selector="coldCallButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0l-xr-8Ew"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Name Selector" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7h4-73-sNB">
+                                <rect key="frame" x="16" y="28" width="343" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Number" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwn-ch-jUh">
+                                <rect key="frame" x="16" y="63.5" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <color key="textColor" red="0.1176196908" green="0.11505384120000001" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </variation>
+                                <variation key="displayGamut=P3-heightClass=regular-widthClass=compact">
+                                    <color key="textColor" red="0.1176196908" green="0.11505384120000001" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </variation>
+                                <variation key="displayGamut=sRGB-heightClass=regular-widthClass=compact">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BLx-cw-sgP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7sX-z4-GoL"/>
                             <constraint firstItem="7h4-73-sNB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DUG-mV-fvk"/>
+                            <constraint firstItem="cwn-ch-jUh" firstAttribute="top" secondItem="7h4-73-sNB" secondAttribute="bottom" constant="8" symbolic="YES" id="KxK-Xx-qoU"/>
                             <constraint firstItem="7h4-73-sNB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="NyY-oY-myI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BLx-cw-sgP" secondAttribute="trailing" id="ZQb-l6-xcp"/>
                             <constraint firstItem="BLx-cw-sgP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e9v-cR-UWK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwn-ch-jUh" secondAttribute="trailing" id="hGX-mQ-KEl"/>
+                            <constraint firstItem="cwn-ch-jUh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i6U-sU-PrP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7h4-73-sNB" secondAttribute="trailing" id="jbE-gN-2u1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="rNumber" destination="cwn-ch-jUh" id="vBh-3m-C0U"/>
                         <outlet property="randomNameLabel" destination="7h4-73-sNB" id="wdg-KD-IUB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="54.422788605697157"/>
         </scene>
     </scenes>
 </document>
