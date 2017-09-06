@@ -1,0 +1,23 @@
+building a single page view app
+
+press 'shift' 'command' 'n'
+
+select single page app
+
+check view controller
+Initial View Controller
+checkbox selection
+
+
+
+Main.storyboard
+click control and drag onto view controller code
+
+outlet
+label non interactive
+
+action
+
+
+auto layout
+constraints across UI between different screen sizes
