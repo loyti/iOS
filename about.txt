@@ -8,9 +8,54 @@ Request Response Cycle
 mobile device makes calls and received response
 
 
+Classes & Methods
+
+class User {
+    var intelligence = 0
+    func studyForTopic(topic: String, hours: Int) {
+        print("I am studying \(topic) for \(hours) hours")
+    }
+}
+var user = User()
+user.studyForTopic(topic: "Math", hours: 12)
+
+It is common practice to  write the name of the first argument in the actual function name ('Topic')
+because the first argument is not going to get an external parameter name.
+By following this practice, it becomes very clear what each argument does.
+Methods do not give free external parameter names for the first argument but do give
+external parameter names for all arguments afterwards.
+
+
+
+Initialization
+Initialization is the operation of setting up an instance of a type.
+It helps us create an instance with appropriate values.
+So far, we didn't have to worry about initializer because we have been
+giving default stored values when defining properties. However,
+if we want more control over how an instance of a Type is created,
+we will have to write our own initializer.
+
+Let's add a name property to our Person class and then
+add the code to allow a user to specify the name when initializing the instance.
+
+class Person {
+  var species = "H. Sapiens"
+  var name: String
+  init(name: String) {   // Note this function doesn't get called explicitly. It is called
+                         // when creating an instance using initialization syntax -- "Person()".
+    self.name = name     // Note use of "self" here to refer to the name property.
+  }
+  func speak() {
+    print("Hello! I am a \(self.species) and my name is \(self.name)")
+                                             // Note how we refer to the properties using "self".
+  }
+}
+var myPerson: Person = Person(name: "Jay")   // Now we have to pass a param to Person initialization.
+myPerson.speak()
 
 
 Optionals
+
 var myOption: String?
 
 force unwrap
