@@ -12,21 +12,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        randomNameLabel.isHidden = true
         // Do any additional setup after loading the view, typically from a nib.
-        updateUI()
     }
     
     let randomNames = [
         "Brice", "Audrey", "Elizabeth", "Chasin", "David", "Jimmy"
     ]
-    var randomNum:Int = Int(arc4random_uniform(5))
+    var randomNum:Int = Int(arc4random_uniform(6))
     
     @IBOutlet weak var rNumber: UILabel!
     @IBOutlet weak var randomNameLabel: UILabel!
     
     @IBAction func coldCallButton(_ sender: UIButton) {
-        randomNum = Int(arc4random_uniform(5))
+        randomNum = Int(arc4random_uniform(6))
         print("Cold Call Button Pressed and Random Number \(randomNum) generated")
         
         if randomNameLabel.isHidden == true {
@@ -37,6 +35,13 @@ class ViewController: UIViewController {
         } else {
             randomNameLabel.isHidden = true
             updateUI()
+        }
+        if randomNum <= 2 {
+            rNumber.textColor = UIColor.red
+        } else if randomNum == 5 {
+            rNumber.textColor = UIColor.green
+        } else {
+            rNumber.textColor = UIColor.orange
         }
         updateUI()
     }
