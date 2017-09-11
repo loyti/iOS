@@ -27,7 +27,8 @@ extension ViewController: UITableViewDataSource {
     
     func tableView (_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return colors.count
+//        return colors.count
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,8 +38,8 @@ extension ViewController: UITableViewDataSource {
 //        for cells to have static colors from colors array
 //        cell.backgroundColor = self.colors[indexPath.row]
         
-//        for cells to have randomly generated colors 
-        cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255-0))/255, green: CGFloat(arc4random_uniform(255-0))/255, blue: CGFloat(arc4random_uniform(255-0))/255, alpha: CGFloat(arc4random_uniform(10-1))/3)
+//        for cells to have randomly generated colors
+        cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255-0))/255, green: CGFloat(arc4random_uniform(255-0))/255, blue: CGFloat(arc4random_uniform(255-0))/255, alpha: CGFloat(arc4random_uniform(10-1))/4)
         
         return cell
     }
