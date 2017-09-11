@@ -1,0 +1,40 @@
+asteroids
+
+Inside of
+class GameScene:
+
+//create asteroids
+var possibleAsteroids = ["asteroid-small.png", "asteroid-icon.png"]
+
+// create category for them
+let asteroidCategory:UInt32 = 0x1 << 1
+
+//create Asteroid Timer
+var Atr = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(addAsteroid), userInfo: nil, repeats: true)
+
+
+// remove gravity constraints
+self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+self.physicsWorld.contactDelegate = self
+
+// create asteroid spawn
+func addAsteroid () {
+
+  possibleAsteroids = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAsteroids) as! [String]
+  let asteroid = SKSpriteNode(imageNamed: possibleAsteroids[0])
+  let randomAsteroidPosition = GKRandomDistribution(lowestValue: -100, highestValue: 500)
+  let position = CGFloat(randomAsteroidPosition.nextInt())
+  asteroid.position = CGPoint(x: position, y: self.frame.size.height + asteroid.size.height)
+  asteroid.physicsBody = SKPhysicsBody(rectangleOf: asteroid.size)
+  asteroid.physicsBody?.isDynamic = true
+  asteroid.physicsBody?.categoryBitMask = asteroidCategory
+  asteroid.physicsBody?.contactTestBitMask = bulletCategory
+  asteroid.physicsBody?.collisionBitMask = 0
+  self.addChild(asteroid)
+  let animationDuration:TimeInterval = 5
+  var actionArray = [SKAction]()
+  actionArray.append(SKAction.move(to: CGPoint(x: position, y: -asteroid.size.height), duration: animationDuration))
+  actionArray.append(SKAction.removeFromParent())
+  asteroid.run(SKAction.sequence(actionArray))
+
+}

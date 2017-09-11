@@ -1,0 +1,27 @@
+table views
+
+Table View onto View
+
+
+Select Pro
+What data inside of cells
+
+tableView
+
+number of rows and sections may be dynamic based of array length
+
+.dataSource = self
+
+numberOfRowsInSection
+return nums.count
+
+cellForRowAtindexPath:
+let cell = tableView.dequeueResuableCell(withIdentifier: "tableViewCell", for: indexPath)
+
+dequeueResuableCell with indexPath - adds to cell right away - recommended
+cell.textLabel?.text = String(nums[indexPath.row])
+return cell
+
+
+
+extension ViewController: UITableViewDataSource {}
