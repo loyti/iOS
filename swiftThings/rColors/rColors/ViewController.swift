@@ -34,7 +34,11 @@ extension ViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "color", for: indexPath)
         
-        cell.backgroundColor = self.colors[indexPath.row]
+//        for cells to have static colors from colors array
+//        cell.backgroundColor = self.colors[indexPath.row]
+        
+//        for cells to have randomly generated colors 
+        cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255-0))/255, green: CGFloat(arc4random_uniform(255-0))/255, blue: CGFloat(arc4random_uniform(255-0))/255, alpha: CGFloat(arc4random_uniform(10-1))/3)
         
         return cell
     }

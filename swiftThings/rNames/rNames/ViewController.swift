@@ -40,6 +40,8 @@ extension ViewController: UITableViewDataSource {
         let age = arc4random_uniform(95-5) + 5
         cell.detailTextLabel?.text = "\(age) years old"
         
+        cell.backgroundColor = UIColor(red: CGFloat(arc4random_uniform(255-0))/255, green: CGFloat(arc4random_uniform(255-0))/255, blue: CGFloat(arc4random_uniform(255-0))/255, alpha:  CGFloat(arc4random_uniform(1-0)))
+        
         return cell
     }
 }
