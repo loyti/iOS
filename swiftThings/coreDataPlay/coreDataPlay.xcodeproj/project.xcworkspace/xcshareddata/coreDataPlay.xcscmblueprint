@@ -7,14 +7,14 @@
     "0F4B3135479D4F5FDF8824C423A447BF98BC1BED" : 9223372036854775807,
     "028881A291A48C32AD83640B904DB8ABE26247DC" : 9223372036854775807
   },
-  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "977ECEC4-5AFD-4E7D-A7C4-E26B3C9FCFA7",
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5D6A4ACA-2AB8-4769-8256-6817E2F29E38",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "0F4B3135479D4F5FDF8824C423A447BF98BC1BED" : "",
     "028881A291A48C32AD83640B904DB8ABE26247DC" : "iOS\/"
   },
-  "DVTSourceControlWorkspaceBlueprintNameKey" : "buckets",
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "coreDataPlay",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "swiftThings\/buckets\/buckets.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "swiftThings\/coreDataPlay\/coreDataPlay.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/loyti\/iOS.git",

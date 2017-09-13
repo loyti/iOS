@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4208E2F61F6888CE005B12C1"
-               BuildableName = "buckets.app"
-               BlueprintName = "buckets"
-               ReferencedContainer = "container:buckets.xcodeproj">
+               BlueprintIdentifier = "42DB351D1F69B8CF00E986E9"
+               BuildableName = "coreDataPlay.app"
+               BlueprintName = "coreDataPlay"
+               ReferencedContainer = "container:coreDataPlay.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,30 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4208E30A1F6888CE005B12C1"
-               BuildableName = "bucketsTests.xctest"
-               BlueprintName = "bucketsTests"
-               ReferencedContainer = "container:buckets.xcodeproj">
+               BlueprintIdentifier = "42DB35311F69B8CF00E986E9"
+               BuildableName = "coreDataPlayTests.xctest"
+               BlueprintName = "coreDataPlayTests"
+               ReferencedContainer = "container:coreDataPlay.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4208E3151F6888CE005B12C1"
-               BuildableName = "bucketsUITests.xctest"
-               BlueprintName = "bucketsUITests"
-               ReferencedContainer = "container:buckets.xcodeproj">
+               BlueprintIdentifier = "42DB353C1F69B8CF00E986E9"
+               BuildableName = "coreDataPlayUITests.xctest"
+               BlueprintName = "coreDataPlayUITests"
+               ReferencedContainer = "container:coreDataPlay.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4208E2F61F6888CE005B12C1"
-            BuildableName = "buckets.app"
-            BlueprintName = "buckets"
-            ReferencedContainer = "container:buckets.xcodeproj">
+            BlueprintIdentifier = "42DB351D1F69B8CF00E986E9"
+            BuildableName = "coreDataPlay.app"
+            BlueprintName = "coreDataPlay"
+            ReferencedContainer = "container:coreDataPlay.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4208E2F61F6888CE005B12C1"
-            BuildableName = "buckets.app"
-            BlueprintName = "buckets"
-            ReferencedContainer = "container:buckets.xcodeproj">
+            BlueprintIdentifier = "42DB351D1F69B8CF00E986E9"
+            BuildableName = "coreDataPlay.app"
+            BlueprintName = "coreDataPlay"
+            ReferencedContainer = "container:coreDataPlay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4208E2F61F6888CE005B12C1"
-            BuildableName = "buckets.app"
-            BlueprintName = "buckets"
-            ReferencedContainer = "container:buckets.xcodeproj">
+            BlueprintIdentifier = "42DB351D1F69B8CF00E986E9"
+            BuildableName = "coreDataPlay.app"
+            BlueprintName = "coreDataPlay"
+            ReferencedContainer = "container:coreDataPlay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

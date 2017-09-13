@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  bucketL
+//  coreDataPlay
 //
-//  Created by Brice Prather on 9/12/17.
+//  Created by Brice Prather on 9/13/17.
 //  Copyright © 2017 Life On Your Terms, Inc. All rights reserved.
 //
 
 import UIKit
+
 import CoreData
 
 @UIApplicationMain
@@ -88,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    
+
+
 }
 

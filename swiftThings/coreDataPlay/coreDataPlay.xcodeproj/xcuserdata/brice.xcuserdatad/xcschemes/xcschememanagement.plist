@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>buckets.xcscheme</key>
+		<key>coreDataPlay.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,17 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4208E2F61F6888CE005B12C1</key>
+		<key>42DB351D1F69B8CF00E986E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4208E30A1F6888CE005B12C1</key>
+		<key>42DB35311F69B8CF00E986E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4208E3151F6888CE005B12C1</key>
+		<key>42DB353C1F69B8CF00E986E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,15 +1,15 @@
 //
-//  bucketsTests.swift
-//  bucketsTests
+//  coreDataPlayTests.swift
+//  coreDataPlayTests
 //
-//  Created by Brice Prather on 9/12/17.
+//  Created by Brice Prather on 9/13/17.
 //  Copyright © 2017 Life On Your Terms, Inc. All rights reserved.
 //
 
 import XCTest
-@testable import buckets
+@testable import coreDataPlay
 
-class bucketsTests: XCTestCase {
+class coreDataPlayTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
