@@ -41,7 +41,20 @@ class ViewController: UITableViewController, AddBucketItemTableViewControllerDel
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected row ")
+//        performSegue(withIdentifier: "EditItemSegue", sender: indexPath)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
         performSegue(withIdentifier: "EditItemSegue", sender: indexPath)
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        items.remove(at: indexPath.row)
+        tableView.reloadData()
         
     }
     
