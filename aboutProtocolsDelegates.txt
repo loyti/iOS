@@ -1,0 +1,14 @@
+about swift protocols & delegates
+
+What are the functions called
+what do they take in
+what do they return
+
+pass data between view controllers by having
+functions within the view controllers take arguments
+
+Set up new protocol file
+
+import Foundation
+
+protocol ModalViewControllerDelegate: class { func ___()}
